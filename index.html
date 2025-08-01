@@ -161,27 +161,47 @@
         padding-left: 0.75rem;
       }
     }
+
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 1.5rem 0 1rem;
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--accent-color);
+      margin-top: 3rem;
+    }
+
+    footer .footer-content p {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      footer {
+        font-size: 0.75rem;
+      }
+    }
   </style>
 
 </head>
 
 <body>
   <div class="container">
-  <header>
-    <div>
-      <h1>Venkatesh C</h1>
-      <p><strong>A Full Stack Software Developer</strong></p>
-    </div>
-    <div class="location">📍 Chennai, TN, IN</div>
-  </header>
+    <header>
+      <div>
+        <h1>Venkatesh C</h1>
+        <p><strong>A Full Stack Software Developer</strong></p>
+      </div>
+      <div class="location">📍 Chennai, TN, IN</div>
+    </header>
 
     <div class="section">
-    <div class="section-title">Experience</div>
+      <div class="section-title">Experience</div>
       <ul>
         <li>Working as a Junior Software Developer at <strong>DocChain.io by Print2Block</strong> (Nov 2022 – Present)</li>
         <li>2.8+ years of experience as a Full Stack Developer, building and deploying scalable web applications</li>
         <li>Expertise in RESTful APIs, JWT authentication, Redis caching, and secure deployment using Nginx and PM2</li>
         <li>Skilled in Svelte, TailwindCSS, Node.js, MongoDB, and performance optimization across frontend and backend</li>
+
       </ul>
     </div>
 
@@ -211,7 +231,18 @@
       </ul>
     </div>
 
+    <footer>
+      <div class="footer-content">
+        <p>&copy; <span id="year"></span> Venkatesh C. All rights reserved.</p>
+        <p>Made with ❤️ in Chennai</p>
+      </div>
+    </footer>
+
   </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 
 </html>
