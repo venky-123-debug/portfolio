@@ -1,247 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Venkatesh C - Full Stack Web Developer" />
+    <meta
+      name="keywords"
+      content="Venkatesh C, Software Developer, Full Stack Web Developer, Developer, Programming"
+    />
+    <meta name="author" content="Venkatesh C" />
+    <title>Venkatesh C</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-color: #111111;
+        --text-color: #e6e6e6;
+        --accent-color: #808080;
+        --border-color: #333333;
+        --highlight-color: #ffffff;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Venkatesh C - Full Stack Web Developer">
-  <meta name="keywords" content="Venkatesh C, Software Developer, Full Stack Web Developer, Developer, Programming">
-  <meta name="author" content="Venkatesh C">
-  <title>Venkatesh C</title>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #111111;
-      --text-color: #e6e6e6;
-      --accent-color: #808080;
-      --border-color: #333333;
-      --highlight-color: #ffffff;
-    }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+      body {
+        font-family: "Ubuntu Mono", monospace;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.5;
+        padding: 0;
+        overflow-y: auto;
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.015) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.015) 1px,
+            transparent 1px
+          ),
+          linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+        background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+        background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+      }
 
-    body {
-      font-family: 'Ubuntu Mono', monospace;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.5;
-      padding: 0;
-      overflow-y: auto;
-      background-image:
-        linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-        linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
-      background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-      background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
-    }
-
-    .container {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 2rem;
-      min-height: 100vh;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      margin-bottom: 3rem;
-    }
-
-    h1 {
-      font-weight: 700;
-      font-size: 2rem;
-      margin-bottom: 0;
-    }
-
-    .location {
-      display: flex;
-      align-items: center;
-      font-size: 1rem;
-    }
-
-    .section-title {
-      font-weight: 700;
-      margin-bottom: 1rem;
-      font-size: 1.25rem;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 0.25rem;
-    }
-
-    ul {
-      list-style-type: none;
-      margin-left: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    li {
-      margin-bottom: 0.7rem;
-      position: relative;
-      padding-left: 1rem;
-    }
-
-    li::before {
-      content: "*";
-      position: absolute;
-      left: 0;
-      color: var(--accent-color);
-    }
-
-    li ul li::before {
-      content: "-";
-    }
-
-    a {
-      color: var(--text-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      transition: all 0.2s ease;
-    }
-
-    a:hover {
-      color: white;
-      border-bottom: 1px solid white;
-      padding-bottom: 2px;
-    }
-
-    .stats {
-      display: inline-block;
-      color: var(--highlight-color);
-      font-weight: 700;
-      padding: 0 2px;
-      margin: 0 2px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 3px;
-    }
-
-    @media (max-width: 768px) {
       .container {
-        padding: 1.25rem;
-      }
-
-      .section {
-        margin-bottom: 2rem;
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 2rem;
+        min-height: 100vh;
       }
 
       header {
-        margin-bottom: 2rem;
-      }
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 3rem;
       }
 
       h1 {
-        margin-bottom: 0.5rem;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 0;
       }
 
-      .container {
-        padding: 1rem;
+      .location {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-weight: 700;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.25rem;
       }
 
       ul {
-        margin-left: 0.5rem;
+        list-style-type: none;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
       }
 
       li {
-        padding-left: 0.75rem;
+        margin-bottom: 0.7rem;
+        position: relative;
+        padding-left: 1rem;
       }
-    }
 
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding: 1.5rem 0 1rem;
-      text-align: center;
-      font-size: 0.875rem;
-      color: var(--accent-color);
-      margin-top: 3rem;
-    }
+      li::before {
+        content: "*";
+        position: absolute;
+        left: 0;
+        color: var(--accent-color);
+      }
 
-    footer .footer-content p {
-      margin-bottom: 0.5rem;
-    }
+      li ul li::before {
+        content: "-";
+      }
 
-    @media (max-width: 600px) {
+      a {
+        color: var(--text-color);
+        text-decoration: none;
+        border-bottom: 1px solid var(--accent-color);
+        transition: all 0.2s ease;
+      }
+
+      a:hover {
+        color: white;
+        border-bottom: 1px solid white;
+        padding-bottom: 2px;
+      }
+
+      .stats {
+        display: inline-block;
+        color: var(--highlight-color);
+        font-weight: 700;
+        padding: 0 2px;
+        margin: 0 2px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1.25rem;
+        }
+
+        .section {
+          margin-bottom: 2rem;
+        }
+
+        header {
+          margin-bottom: 2rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        h1 {
+          margin-bottom: 0.5rem;
+        }
+
+        .container {
+          padding: 1rem;
+        }
+
+        ul {
+          margin-left: 0.5rem;
+        }
+
+        li {
+          padding-left: 0.75rem;
+        }
+      }
+
       footer {
-        font-size: 0.75rem;
+        border-top: 1px solid var(--border-color);
+        padding: 1.5rem 0 1rem;
+        text-align: center;
+        font-size: 0.875rem;
+        color: var(--accent-color);
+        margin-top: 3rem;
       }
-    }
-  </style>
 
-</head>
+      footer .footer-content p {
+        margin-bottom: 0.5rem;
+      }
 
-<body>
-  <div class="container">
-    <header>
-      <div>
-        <h1>Venkatesh C</h1>
-        <p><strong>A Full Stack Software Developer</strong></p>
+      @media (max-width: 600px) {
+        footer {
+          font-size: 0.75rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div>
+          <h1>Venkatesh C</h1>
+          <p><strong>A Full Stack Software Developer</strong></p>
+        </div>
+        <div class="location">📍 Chennai, TN, IN</div>
+      </header>
+
+      <div class="section">
+        <div class="section-title">Experience</div>
+        <ul>
+          <li>
+            Working as a Junior Software Developer at
+            <strong>DocChain.io by Print2Block</strong> (Nov 2022 – Present)
+          </li>
+          <li>
+            2.11+ years of experience as a Full Stack Developer, building and
+            deploying scalable web applications
+          </li>
+          <li>
+            Expertise in RESTful APIs, JWT authentication, Redis caching, and
+            secure deployment using Nginx and PM2
+          </li>
+          <li>
+            Skilled in Svelte, TailwindCSS, Node.js, MongoDB, and performance
+            optimization across frontend and backend
+          </li>
+        </ul>
       </div>
-      <div class="location">📍 Chennai, TN, IN</div>
-    </header>
 
-    <div class="section">
-      <div class="section-title">Experience</div>
-      <ul>
-        <li>Working as a Junior Software Developer at <strong>DocChain.io by Print2Block</strong> (Nov 2022 – Present)</li>
-        <li>2.10+ years of experience as a Full Stack Developer, building and deploying scalable web applications</li>
-        <li>Expertise in RESTful APIs, JWT authentication, Redis caching, and secure deployment using Nginx and PM2</li>
-        <li>Skilled in Svelte, TailwindCSS, Node.js, MongoDB, and performance optimization across frontend and backend</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <div class="section-title">Technical Achievements</div>
-      <ul>
-        <li>LeetCode: Solved 95+ problems and counting → <a href="https://leetcode.com/u/venky_ME/" target="_blank">profile</a></li>
-        <li>HackerRank: Solved 100+ problems, focused on strengthening DSA concepts → <a href="https://www.hackerrank.com/profile/venkat_c_dev" target="_blank">profile</a></li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <div class="section-title">Contact</div>
-      <ul>
-        <li><a href="mailto:venkatbe26494@gmail.com">venkatbe26494@gmail.com</a></li>
-        <li><a href="tel:+917402161837">Phone: +91 7402161837</a></li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <div class="section-title">Links</div>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/venkatesh-c-4412439a" target="_blank">LinkedIn profile</a></li>
-        <li><a href="https://github.com/venky-123-debug" target="_blank">GitHub profile</a></li>
-        <li><a href="https://leetcode.com/u/venky_ME/" target="_blank">LeetCode profile</a></li>
-        <li><a href="https://www.hackerrank.com/profile/venkat_c_dev" target="_blank">HackerRank profile</a></li>
-      </ul>
-    </div>
-
-    <footer>
-      <div class="footer-content">
-        <p>&copy; <span id="year"></span> Venkatesh C. All rights reserved.</p>
-        <p>Made with ❤️ in Chennai</p>
+      <div class="section">
+        <div class="section-title">Technical Achievements</div>
+        <ul>
+          <li>
+            LeetCode: Solved 100+ problems and counting →
+            <a href="https://leetcode.com/u/venky_ME/" target="_blank"
+              >profile</a
+            >
+          </li>
+          <li>
+            HackerRank: Solved 100+ problems, focused on strengthening DSA
+            concepts →
+            <a
+              href="https://www.hackerrank.com/profile/venkat_c_dev"
+              target="_blank"
+              >profile</a
+            >
+          </li>
+        </ul>
       </div>
-    </footer>
 
-  </div>
+      <div class="section">
+        <div class="section-title">Contact</div>
+        <ul>
+          <li>
+            <a href="mailto:venkatbe26494@gmail.com">venkatbe26494@gmail.com</a>
+          </li>
+          <li><a href="tel:+917402161837">Phone: +91 7402161837</a></li>
+        </ul>
+      </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
+      <div class="section">
+        <div class="section-title">Links</div>
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/venkatesh-c-4412439a"
+              target="_blank"
+              >LinkedIn profile</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/venky-123-debug" target="_blank"
+              >GitHub profile</a
+            >
+          </li>
+          <li>
+            <a href="https://leetcode.com/u/venky_ME/" target="_blank"
+              >LeetCode profile</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.hackerrank.com/profile/venkat_c_dev"
+              target="_blank"
+              >HackerRank profile</a
+            >
+          </li>
+        </ul>
+      </div>
 
+      <footer>
+        <div class="footer-content">
+          <p>
+            &copy; <span id="year"></span> Venkatesh C. All rights reserved.
+          </p>
+          <p>Made with ❤️ in Chennai</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
