@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Venkatesh C - Full Stack Web Developer" />
+    <meta
+      name="description"
+      content="Venkatesh C - Full Stack Software Developer specializing in Node.js, Svelte, TailwindCSS, MongoDB, and scalable web applications."
+    />
     <meta
       name="keywords"
-      content="Venkatesh C, Software Developer, Full Stack Web Developer, Developer, Programming"
+      content="Venkatesh C, Full Stack Developer, Software Engineer, Node.js Developer, Svelte, TailwindCSS, MongoDB, Chennai Developer, Web Developer"
     />
     <meta name="author" content="Venkatesh C" />
-    <title>Venkatesh C</title>
+    <title>Venkatesh C | Full Stack Developer</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,7 +40,7 @@
         font-family: "Ubuntu Mono", monospace;
         background-color: var(--bg-color);
         color: var(--text-color);
-        line-height: 1.5;
+        line-height: 1.6;
         padding: 0;
         overflow-y: auto;
         background-image: linear-gradient(
@@ -67,18 +70,32 @@
         justify-content: space-between;
         width: 100%;
         margin-bottom: 3rem;
+        flex-wrap: wrap;
       }
 
       h1 {
         font-weight: 700;
         font-size: 2rem;
-        margin-bottom: 0;
       }
 
       .location {
-        display: flex;
-        align-items: center;
+        text-align: right;
         font-size: 1rem;
+      }
+
+      .location a {
+        color: var(--accent-color);
+        text-decoration: none;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .location a:hover {
+        color: var(--highlight-color);
+        border-bottom: 1px solid var(--highlight-color);
+      }
+
+      .section {
+        margin-bottom: 2.5rem;
       }
 
       .section-title {
@@ -135,44 +152,6 @@
         border-radius: 3px;
       }
 
-      @media (max-width: 768px) {
-        .container {
-          padding: 1.25rem;
-        }
-
-        .section {
-          margin-bottom: 2rem;
-        }
-
-        header {
-          margin-bottom: 2rem;
-        }
-      }
-
-      @media (max-width: 600px) {
-        header {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
-
-        h1 {
-          margin-bottom: 0.5rem;
-        }
-
-        .container {
-          padding: 1rem;
-        }
-
-        ul {
-          margin-left: 0.5rem;
-        }
-
-        li {
-          padding-left: 0.75rem;
-        }
-      }
-
       footer {
         border-top: 1px solid var(--border-color);
         padding: 1.5rem 0 1rem;
@@ -186,9 +165,25 @@
         margin-bottom: 0.5rem;
       }
 
-      @media (max-width: 600px) {
-        footer {
-          font-size: 0.75rem;
+      @media (max-width: 768px) {
+        .container {
+          padding: 1.25rem;
+        }
+
+        header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+
+        .location {
+          text-align: center;
+          margin-top: 1rem;
+        }
+
+        .section {
+          margin-bottom: 2rem;
         }
       }
     </style>
@@ -199,61 +194,114 @@
       <header>
         <div>
           <h1>Venkatesh C</h1>
-          <p><strong>A Full Stack Software Developer</strong></p>
+          <p><strong>Full Stack Software Developer</strong></p>
         </div>
-        <div class="location">📍 Chennai, TN, IN</div>
+        <div class="location">
+          <div>
+            Chennai, TN, IN<br />
+            <a href="mailto:venkatbe26494@gmail.com">venkatbe26494@gmail.com</a
+            ><br />
+            <a href="tel:+917402161837">+91 7402161837</a>
+          </div>
+        </div>
       </header>
 
       <div class="section">
         <div class="section-title">Experience</div>
         <ul>
           <li>
-            Working as a Junior Software Developer at
-            <strong>DocChain.io by Print2Block</strong> (Nov 2022 – Present)
+            <strong
+              >Junior Software Developer — DocChain.io by Print2Block</strong
+            >
+            (Nov 2022 – Present)
+            <ul>
+              <li>
+                Developed secure, scalable backend services with Node.js and
+                JWT-based authentication.
+              </li>
+              <li>
+                Built modular, high-performance UIs using Svelte and
+                TailwindCSS.
+              </li>
+              <li>
+                Optimized performance with MongoDB schema design and Redis
+                caching.
+              </li>
+              <li>
+                Deployed production-ready apps using Nginx, PM2, SSL, AWS & GCP.
+              </li>
+              <li>
+                Collaborated across teams for maintainable, high-quality
+                codebases.
+              </li>
+            </ul>
           </li>
           <li>
-            2.11+ years of experience as a Full Stack Developer, building and
-            deploying scalable web applications
-          </li>
-          <li>
-            Expertise in RESTful APIs, JWT authentication, Redis caching, and
-            secure deployment using Nginx and PM2
-          </li>
-          <li>
-            Skilled in Svelte, TailwindCSS, Node.js, MongoDB, and performance
-            optimization across frontend and backend
+            <strong
+              >Full Stack Developer Intern — DocChain.io by Print2Block</strong
+            >
+            (Jul 2022 – Nov 2022)
+            <ul>
+              <li>
+                Gained hands-on experience in full-stack web development and
+                best industry practices.
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
 
       <div class="section">
-        <div class="section-title">Technical Achievements</div>
+        <div class="section-title">Technical Skills</div>
+        <ul>
+          <li><strong>Languages:</strong> JavaScript, HTML, CSS, Node.js</li>
+          <li><strong>Frontend:</strong> Svelte, TailwindCSS, Bootstrap</li>
+          <li>
+            <strong>Backend:</strong> Node.js, RESTful APIs, JWT Authentication,
+            SHA-256 Hashing
+          </li>
+          <li><strong>Databases:</strong> MongoDB, Redis</li>
+          <li>
+            <strong>DevOps & Deployment:</strong> Nginx, PM2, SSL, AWS, GCP
+          </li>
+          <li><strong>Version Control:</strong> Git, Bitbucket</li>
+          <li><strong>Operating Systems:</strong> Linux, Windows</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Education</div>
         <ul>
           <li>
-            LeetCode: Solved 100+ problems and counting →
-            <a href="https://leetcode.com/u/venky_ME/" target="_blank"
-              >profile</a
-            >
+            Master of Engineering (CAD/CAM) —
+            <em>Anna University, Chennai (2019)</em> —
+            <strong>8.11 CGPA</strong>
           </li>
           <li>
-            HackerRank: Solved 100+ problems, focused on strengthening DSA
-            concepts →
+            Bachelor of Engineering (Mechanical) —
+            <em>Rajalakshmi Engineering College (2015)</em> —
+            <strong>7.63 CGPA</strong>
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Problem Solving</div>
+        <ul>
+          <li>
+            Solved <span class="stats">100+</span> problems on
+            <a href="https://leetcode.com/u/venky_ME/" target="_blank"
+              >LeetCode</a
+            >.
+          </li>
+          <li>
+            Solved <span class="stats">100+</span> problems on
             <a
               href="https://www.hackerrank.com/profile/venkat_c_dev"
               target="_blank"
-              >profile</a
-            >
+              >HackerRank</a
+            >.
           </li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <div class="section-title">Contact</div>
-        <ul>
-          <li>
-            <a href="mailto:venkatbe26494@gmail.com">venkatbe26494@gmail.com</a>
-          </li>
-          <li><a href="tel:+917402161837">Phone: +91 7402161837</a></li>
         </ul>
       </div>
 
@@ -264,24 +312,24 @@
             <a
               href="https://www.linkedin.com/in/venkatesh-c-4412439a"
               target="_blank"
-              >LinkedIn profile</a
+              >LinkedIn</a
             >
           </li>
           <li>
             <a href="https://github.com/venky-123-debug" target="_blank"
-              >GitHub profile</a
+              >GitHub</a
             >
           </li>
           <li>
             <a href="https://leetcode.com/u/venky_ME/" target="_blank"
-              >LeetCode profile</a
+              >LeetCode</a
             >
           </li>
           <li>
             <a
               href="https://www.hackerrank.com/profile/venkat_c_dev"
               target="_blank"
-              >HackerRank profile</a
+              >HackerRank</a
             >
           </li>
         </ul>
